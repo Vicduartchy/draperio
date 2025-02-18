@@ -1,0 +1,430 @@
+/* ---------- Importação das Fontes Modernas ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ---------- Paleta de Cores ---------- */
+:root {
+    --cor-principal: #822845; /* Vinho */
+    --cor-secundaria: #f1e8e8; /* Rosa claro */
+    --cor-branco: #ffffff; /* Branco */
+    --cor-preto: #000000; /* Preto */
+}
+
+/* ---------- Global ---------- */
+/* ---------- Fundo do Site (BG) ---------- */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background: url('../images/bg.png') repeat; /* Caminho correto para o arquivo */
+    background-size: contain; /* Ajusta a repetição sem distorcer */
+    background-position: center;
+    background-attachment: fixed; /* Mantém o fundo fixo enquanto rola a página */
+}
+
+/* ---------- Estrutura do Layout ---------- */
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px; /* Adiciona espaçamento lateral */
+    gap: 30px;
+}
+
+/* Ajuste geral para espaçamento nas laterais */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Formulário fixo na lateral direita */
+.formulario-fixo {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+}
+
+/* ---------- Cabeçalho ---------- */
+.header {
+    background-color: var(--cor-principal);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.header .logo:hover {
+    transform: scale(1.1);
+}
+
+.header nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header nav a:hover {
+    color: var(--cor-secundaria);
+    transform: scale(1.1);
+}
+
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background-color: var(--cor-secundaria);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--cor-principal); /* Linha separadora */
+}
+
+.hero h1 {
+    color: var(--cor-principal);
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* ---------- Seções Padrão ---------- */
+.secao-padrao {
+    background-color: var(--cor-secundaria);
+    padding: 80px 0;
+    border-bottom: 4px solid var(--cor-principal); /* Linha separadora */
+}
+
+.secao-padrao .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilização do texto nas seções */
+.secao-padrao .texto {
+    flex: 1;
+    text-align: left;
+}
+
+.secao-padrao h2 {
+    color: var(--cor-principal);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.secao-padrao h2 i {
+    font-size: 1.8rem;
+}
+
+.secao-padrao p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Listas escondidas */
+.secao-padrao ul {
+    display: none;
+}
+
+/* Estilização das imagens */
+.secao-padrao .imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.secao-padrao .imagem img {
+    width: 80%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.secao-padrao .imagem img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- Botões ---------- */
+.btn-primary {
+    background-color: var(--cor-principal) !important;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-branco);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-preto) !important;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Formulário Fixo ---------- */
+.formulario-fixo {
+    flex: 1;
+    position: sticky;
+    top: 20px; /* Mantém visível ao rolar */
+    align-self: flex-start; /* Garante que ele comece do topo */
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Container do formulário */
+.formulario-container {
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /*border-radius: 10px;*/
+}
+
+/* Título do formulário */
+.formulario-container h2 {
+    color: var(--cor-principal);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario-container h2 i {
+    font-size: 1.6rem;
+}
+
+/* Texto abaixo do título */
+.formulario-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Campos do formulário */
+.formulario-container .form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 2px solid var(--cor-principal);
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Foco nos campos do formulário */
+.formulario-container .form-control:focus {
+    border-color: var(--cor-preto);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de envio */
+.formulario-container .btn-primary {
+    width: 100%;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    color: var(--cor-branco);
+    background-color: var(--cor-principal);
+    border: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.formulario-container .btn-primary:hover {
+    background-color: var(--cor-preto);
+    transform: scale(1.05);
+}
+
+/* Mensagem de sucesso */
+#formMessage {
+    display: none;
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* ---------- Responsividade para o Formulário ---------- */
+@media (max-width: 1024px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    .formulario-fixo {
+        position: relative; /* Deixa ele normal no fluxo da página */
+        width: 100%;
+        margin-top: 30px;
+        max-width: 100%;
+    }
+
+    .formulario-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .formulario-container {
+        padding: 20px;
+    }
+}
+
+
+/* ---------- Redes Sociais ---------- */
+.redes-sociais {
+    background-color: var(--cor-principal);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.redes-sociais h2,
+.redes-sociais p,
+.social-links a {
+    color: var(--cor-branco) !important; /* Define todo o texto como branco */
+}
+
+.redes-sociais h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes-sociais h2 i {
+    font-size: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-instagram, .btn-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-instagram {
+    background-color: #E4405F;
+}
+
+.btn-email {
+    background-color: var(--cor-branco);
+    color: var(--cor-principal);
+}
+
+.btn-instagram:hover, .btn-email:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste no tamanho dos ícones */
+.btn-instagram i, .btn-email i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* ---------- Rodapé (Footer) ---------- */
+.footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+    position: relative; /* Mantém o fluxo da página */
+    left: 0;
+    bottom: 0;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 1024px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    .formulario-fixo {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .formulario-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .secao-padrao .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secao-padrao .texto {
+        text-align: center;
+    }
+
+    .secao-padrao .imagem img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
