@@ -14,116 +14,106 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-=
+
 <body>
 
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <!-- Logo -->
-            <img src="images/logo.png" alt="Logo da Dra. Amanda Gonzalez" class="logo">
-            <!-- Navegação -->
-            <nav class="nav">
-                <a href="#sobre-curso" class="nav-link">Sobre o Curso</a>
-                <a href="#redes-sociais" class="nav-link">Redes Sociais</a>
-            </nav>
-        </div>
-    </header>
+<!-- Cabeçalho -->
+<header class="header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <img src="images/logo.png" alt="Logo da Dra. Amanda Gonzalez" class="logo">
 
-    <!-- Estrutura Principal -->
-    <div class="layout">
-        <!-- Conteúdo Principal -->
-        <main class="conteudo">
-            <!-- Hero Section -->
-            <section class="hero text-center">
-                <div class="container">
-                    <h1><i class="fas fa-tooth"></i> Aprimore sua Prática em Periodontia!</h1>
-                    <p>Descubra as melhores estratégias para elevar seus tratamentos periodontais ao próximo nível.</p>
-                
-                </div>
-            </section>
+        <!-- Título Centralizado -->
+        <h1 class="titulo-header d-flex justify-content-between">Dra. Perio - Amanda Gonzalez</h1>
 
-            <!-- Seção Quem Sou Eu -->
-            <section id="quem-sou-eu" class="secao-padrao fade-in">
-                <div class="container">
-                    <!-- Texto -->
-                    <div class="texto">
-                        <h2><i class="fas fa-user-md"></i> Quem Sou Eu</h2>
-                        <p>
-                            Olá! Sou a Dra. Amanda Gonzalez, especialista em Periodontia e Implantes Dentários.
-                            Há anos ajudo dentistas a aprimorar suas técnicas, trazendo mais segurança e excelência para seus consultórios.
-                            Meu objetivo é compartilhar minha experiência para que você possa se tornar um especialista em periodontia com mais confiança e resultados.
-                        </p>
-                    </div>
-                    <!-- Imagem -->
-                    <div class="imagem">
-                        <img src="images/dra_perio1.jpg" alt="Foto da Dra. Amanda Gonzalez" class="foto-dra">
-                    </div>
-                </div>
-            </section>
+        <!-- Botão do Offcanvas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+            <i class="fas fa-bars"></i>
+        </button>
 
-            <!-- Seção Sobre o Curso -->
-            <section id="sobre-curso" class="secao-padrao fade-in">
-                <div class="container">
-                    <!-- Imagem -->
-                    <div class="imagem">
-                        <img src="images/curso.jpg" alt="Imagem ilustrativa sobre periodontia" class="img-curso">
-                    </div>
-                    <!-- Texto -->
-                    <div class="texto">
-                        <h2><i class="fas fa-book-medical"></i> Aprenda Periodontia na Prática</h2>
-                        <p>
-                            Domine as técnicas mais avançadas de periodontia e eleve sua carreira odontológica!
-                            Neste curso exclusivo, você aprenderá os segredos dos tratamentos periodontais, 
-                            desde diagnósticos precisos até procedimentos eficazes para garantir a melhor saúde bucal dos seus pacientes.
-                        </p>
-                
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seção Redes Sociais -->
-            <section id="redes-sociais" class="redes-sociais fade-in">
-                <div class="container text-center">
-                    <h2><i class="fas fa-share-alt"></i> Conecte-se comigo!</h2>
-                    <p>Siga-me nas redes sociais e acompanhe conteúdos exclusivos sobre periodontia.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/dra.perio/" target="_blank" class="btn btn-instagram">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        <a href="mailto:victoriaduarte.s@gmail.com" class="btn btn-email">
-                            <i class="fas fa-envelope"></i> Enviar E-mail
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Formulário Fixo -->
-        <aside class="formulario-fixo">
-            <div class="formulario-container">
-                <h2><i class="fas fa-file-signature"></i> Inscreva-se Gratuitamente!</h2>
-                <p>Cadastre-se e tenha acesso à mini aula gratuita sobre técnicas avançadas de Periodontia.</p>
-                <form id="contactForm">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Seu Nome" required>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Seu E-mail" required>
-                    <input type="text" id="instagram" name="instagram" class="form-control" placeholder="Seu Instagram (Opcional)">
-                    <button type="submit" class="btn btn-primary">Acessar Mini Aula</button>
-                    <!-- Mensagem de Sucesso -->
-                    <div id="formMessage" style="display: none; color: green; text-align: center; margin-top: 10px;">
-                        Cadastro realizado com sucesso! Confira seu e-mail.
-                    </div>
-                </form>
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
             </div>
-        </aside>
+            <div class="offcanvas-body">
+                <a href="#sobre-curso">Sobre o Curso</a>
+                <a href="#sobre-professora">Sobre a Professora</a>
+                <a href="#redes-sociais">Redes Sociais</a>
+                <a href="#inscreva-se">Inscreva-se</a>
+            </div>
+        </div>
     </div>
+</header>
+
+    <!-- Formulário Fixo -->
+    <aside class="formulario-fixo" id="inscreva-se">
+        <h2><i class="fas fa-file-signature"></i> Inscreva-se Gratuitamente!</h2>
+        <p>Cadastre-se para acessar a mini aula gratuita sobre técnicas avançadas de Periodontia.</p>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" class="form-control" placeholder="Seu Nome" required>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Seu E-mail" required>
+            <input type="text" id="instagram" name="instagram" class="form-control" placeholder="Seu Instagram (Opcional)">
+            <button type="submit" class="btn btn-primary">Acessar Mini Aula</button>
+        </form>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo">
+
+        <!-- Seção Sobre o Curso -->
+        <section id="sobre-curso">
+            <div class="container d-flex align-items-center">
+                <!-- Texto à esquerda -->
+                <div class="texto">
+                    <h2><i class="fas fa-book-medical"></i>Aprimore Suas Habilidades em Periodontia</h2>
+                    <p>Domine técnicas modernas em periodontia com foco em prática clínica e resultados eficazes. Um curso dinâmico, pensado para quem busca excelência nos tratamentos.</p>
+                </div>
+                <!-- Imagem à direita -->
+                <div class="imagem">
+                    <img src="images/curso.jpg" alt="Imagem do Curso" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre a Professora -->
+        <section id="sobre-professora">
+            <div class="container d-flex align-items-center flex-row-reverse">
+                <!-- Texto à direita -->
+                <div class="texto">
+                    <h2><i class="fas fa-user-md"></i> Conheça a Dra. Amanda Gonzalez</h2>
+                    <p>Cirurgiã-dentista especialista em Periodontia pela USP, professora universitária e referência em tratamentos periodontais. Uma profissional apaixonada por ensinar e transformar sorrisos.</p>
+                </div>
+                <!-- Imagem à esquerda -->
+                <div class="imagem">
+                    <img src="images/dra_perio3.jpg" alt="Dra. Amanda Gonzalez" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+<!-- Seção Redes Sociais -->
+<section id="redes-sociais" class="redes-sociais">
+    <h2><i class="fas fa-share-alt"></i> Conecte-se nas Redes Sociais</h2>
+    <p>Acompanhe mais conteúdos sobre Periodontia.</p>
+    <div class="social-links">
+        <a href="https://www.instagram.com/dra.perio/" target="_blank" class="btn btn-redes">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="mailto:contato@draamandagonzalez.com.br" class="btn btn-redes">
+            <i class="fas fa-envelope"></i> E-mail
+        </a>
+    </div>
+</section>
+
+</main>
 
     <!-- Rodapé -->
     <footer class="footer">
         <p>&copy; 2024 Dra. Amanda Gonzalez. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script de Interatividade -->
-    <script src="js/script.js" defer></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
