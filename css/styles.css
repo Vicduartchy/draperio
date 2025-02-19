@@ -1,0 +1,324 @@
+/* ---------- Importação das Fontes Modernas ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ---------- Paleta de Cores ---------- */
+:root {
+    --cor-principal: #822845; /* Vinho */
+    --cor-secundaria: #f1e8e8; /* Rosa claro */
+    --cor-branco: #ffffff; /* Branco */
+    --cor-preto: #000000; /* Preto */
+    --cor-destaque: #ffccab; /* Amarelo */
+    --cor-gradiente: linear-gradient(90deg, #822845, #f6a29a); /* Gradiente Vinho para Amarelo */
+    --cor-gradiente-suave: linear-gradient(135deg, #f1e8e8, #ffffff); /* Gradiente Suave */
+}
+
+/* ---------- Global ---------- */
+/* ---------- Fundo do Site ---------- */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background: url('../images/bg2.jpg') no-repeat center center fixed; /* Caminho para a imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    color: var(--cor-preto);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+/* ---------- Cabeçalho ---------- */
+.header {
+    font-family: 'Poppins', sans-serif !important;
+    padding: 10px 20px;
+    background: url('../images/bg2.jpg') no-repeat center center fixed; /* Caminho para a imagem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Cabeçalho com Fonte Thin ---------- */
+.header .titulo-header {
+    font-family: 'Poppins', sans-serif; /* Ou troque por Roboto, Lato, etc. */
+    font-weight: 300; /* Peso fino */
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.header .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* ---------- Título do Cabeçalho ---------- */
+.titulo-header {
+    font-size: 1.8rem;
+    position: left;
+    color: var(--cor-branco);
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.navbar-toggler {
+    background-color: var(--cor-branco);
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* ---------- Offcanvas Menu ---------- */
+.offcanvas-header {
+    padding: 10px 20px;
+    background: url('../images/bg2.jpg') no-repeat center center fixed; /* Caminho para a imagem */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.offcanvas-body a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+
+.offcanvas-body a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Formulário Fixo ---------- */
+.formulario-fixo {
+    background: var(--cor-gradiente-suave);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    margin: 20px 0;
+    z-index: 999;
+}
+
+.formulario-fixo h2 {
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.formulario-fixo .form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--cor-principal);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-fixo .form-control:focus {
+    border-color: var(--cor-preto);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formulario-fixo .btn-primary {
+    background: var(--cor-gradiente);
+    color: var(--cor-branco);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.formulario-fixo .btn-primary:hover {
+    background: var(--cor-destaque);
+    transform: scale(1.05);
+}
+
+/* ---------- Conteúdo Principal ---------- */
+.conteudo {
+    padding: 12px 0;
+    margin-left: 20px; /* Espaço da borda esquerda */
+    margin-right: 340px; /* Espaço até o formulário fixo */
+    box-sizing: border-box;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: var(--cor-gradiente-suave);
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ---------- Ajustes nas Imagens ---------- */
+section .imagem img {
+    width: 100%;
+    max-width: 250px; /* Diminui o tamanho máximo */
+    height: auto;
+    border-radius: 10px; /* Borda levemente arredondada */
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+/* ---------- Alinhamento de Texto e Imagem ---------- */
+#sobre-curso .container {
+    flex-direction: row; /* Imagem à direita */
+}
+
+#sobre-professora .container {
+    flex-direction: row-reverse; /* Imagem à esquerda */
+}
+
+.texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.imagem {
+    flex: 1;
+    padding: 20px;
+}
+
+/* ---------- Redes Sociais ---------- */
+.redes-sociais {
+    text-align: center;
+}
+
+.redes-sociais .btn-redes {
+    background: linear-gradient(135deg, #E4405F, #C13584); /* Mesma cor para ambos os botões */
+    color: var(--cor-branco);
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.redes-sociais .btn-redes:hover {
+    transform: scale(1.1);
+    background: #d32f5b; /* Tom um pouco mais escuro ao passar o mouse */
+}
+
+
+/* ---------- Rodapé ---------- */
+.footer {
+    background: var(--cor-gradiente);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 1024px) {
+    .formulario-fixo {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 20px 0;
+    }
+
+    .conteudo {
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    section {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .conteudo {
+        margin: 0;
+        padding: 20px;
+        width: auto;
+        box-sizing: border-box;
+    }
+
+    .formulario-fixo {
+        position: relative;
+        margin: 10px 15px;
+        padding: 20px;
+        top: 0;
+        right: 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: auto;
+        box-sizing: border-box;
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .imagem img {
+        max-width: 80%;
+        margin: 0 auto 15px;
+        border-radius: 10px;
+    }
+
+    .texto {
+        padding: 10px 0;
+    }
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    section p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .header h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
