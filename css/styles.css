@@ -127,11 +127,13 @@ header {
     z-index: 999;
 }
 
+
 header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 header .titulo-header {
     font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
@@ -154,6 +156,7 @@ header .navbar-toggler {
 header .navbar-toggler:hover {
     background-color: var(--cor-apoio);
 }
+
 /* ---------- Estilos Offcanvas Menu ---------- */
 .offcanvas-body {
     padding: 20px;
