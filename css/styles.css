@@ -191,16 +191,12 @@ header .navbar-toggler:hover {
     font-weight: bold; /* Pode adicionar negrito para destacar ainda mais */
 }
 
-/* ---------- Estilos do Formulário Fixo ---------- */
-/* ---------- Estilos do Formulário Fixo (ATUALIZADO) ---------- */
+/* ---------- Estilos do Formulário Fixo (OTIMIZADO para Harmonia e Proporcionalidade) ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
-    padding-top: 25px;
-    padding-right: 25px;
-    padding-bottom: 60px; /* Aumenta padding-bottom para conter o botão */
-    padding-left: 25px;
+    padding: 30px; /* Padding UNIFORME em todas as laterais para equilíbrio */
     border-radius: 8px;
-    border-bottom: 2px solid var(--cor-apoio); /* Adiciona borda inferior para definir a caixa */
+    border-bottom: 2px solid var(--cor-apoio); /* Mantém borda inferior para definir a caixa */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
@@ -209,8 +205,8 @@ header .navbar-toggler:hover {
     right: 20px;
     transform: translateY(-50%);
     z-index: 1000;
-    margin-top: 80px; /* Adiciona margem superior para afastar do header */
-    height: auto; /* Remove a altura fixa para responsividade */
+    margin-top: 80px; /* Mantém margem superior para afastar do header */
+    height: auto; /* Mantém altura automática para responsividade */
 }
 
 .formulario-fixo h2 {
@@ -224,15 +220,17 @@ header .navbar-toggler:hover {
     text-align: center;
     color: var(--cor-secundaria);
     margin-bottom: 25px;
+    font-size: 1rem; /* Mantém tamanho de fonte proporcional */
+    line-height: 1.6; /* Mantém line-height para legibilidade */
 }
 
 .formulario-fixo .form-control {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumenta um pouco o margin-bottom para mais espaçamento vertical */
     padding: 12px;
     border: 2px solid var(--cor-apoio);
     border-radius: 7px;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1rem; /* Mantém tamanho de fonte proporcional */
 }
 
 .formulario-fixo .btn-primary {
@@ -245,15 +243,14 @@ header .navbar-toggler:hover {
     color: var(--cor-branco);
     text-align: center;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Mantém tamanho de fonte para destacar o botão */
     transition: background-color 0.3s ease;
-    margin-top: 10px; /* Adiciona um pouco de margem no topo do botão, se precisar */
+    margin-top: 25px; /* Adiciona margin-top para separar o botão dos campos */
 }
 
 .formulario-fixo .btn-primary:hover {
     background-color: #0056b3;
 }
-
 /* ---------- Estilos da Seção Redes Sociais ---------- */
 #redes-sociais {
     text-align: center;
