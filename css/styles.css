@@ -194,18 +194,20 @@ header .navbar-toggler:hover {
 /* ---------- Estilos do Formulário Fixo (OTIMIZADO para DIMINUIÇÃO AO MÁXIMO - SUPER COMPACTO) ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
-    padding: 15px; /* Diminui padding geral para 15px - SUPER COMPACTO */
+    padding: 15px; /* Mantém padding geral para 15px - SUPER COMPACTO */
     border-radius: 8px;
     border-bottom: 2px solid var(--cor-apoio);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     position: fixed;
-    top: 50%;
+    /* REMOVIDO: centralização vertical */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    top: VALOR_EM_PIXELS_DESCOBERTO_NAS_DEVTOOLS; /* 👈  NOVO: Alinhamento ao topo dos boxes -  SUBSTITUA por valor real em pixels! */
     right: 20px;
-    transform: translateY(-50%);
     z-index: 1000;
-    margin-top: 0px;
+    margin-top: 0; /* Garante que margin-top não interfira no posicionamento 'top' */
     height: auto;
 }
 
