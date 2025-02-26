@@ -192,23 +192,25 @@ header .navbar-toggler:hover {
 }
 
 /* ---------- Estilos do Formulário Fixo ---------- */
+/* ---------- Estilos do Formulário Fixo (ATUALIZADO) ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
     padding-top: 25px;
     padding-right: 25px;
-    padding-bottom: 60px;
+    padding-bottom: 60px; /* Aumenta padding-bottom para conter o botão */
     padding-left: 25px;
     border-radius: 8px;
-    border-bottom: 2px solid var(--cor-apoio); /* Adiciona uma borda inferior para reforçar a "caixa" */
+    border-bottom: 2px solid var(--cor-apoio); /* Adiciona borda inferior para definir a caixa */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 507px;
     max-width: 400px;
     position: fixed;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
     z-index: 1000;
+    margin-top: 80px; /* Adiciona margem superior para afastar do header */
+    height: auto; /* Remove a altura fixa para responsividade */
 }
 
 .formulario-fixo h2 {
@@ -245,6 +247,7 @@ header .navbar-toggler:hover {
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
+    margin-top: 10px; /* Adiciona um pouco de margem no topo do botão, se precisar */
 }
 
 .formulario-fixo .btn-primary:hover {
