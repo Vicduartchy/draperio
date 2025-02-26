@@ -77,37 +77,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- 5.  FUNCIONALIDADE DE ENVIO DO FORMULÁRIO PARA O GOOGLE SHEETS (REFEITO E OTIMIZADO) ---
-    // REFEITO E OTIMIZADO para maior clareza e robustez
+    // REFEITO E OTIMIZADO para maior clareza e robustez - **MENSAGEM DE SUCESSO CORRIGIDA!**
 
     const inscricaoForm = document.getElementById("inscricaoForm");
     const formMessage = document.getElementById("formMessage");
+    const formErrorMessage = document.getElementById("formErrorMessage"); // **NOVA MENSAGEM DE ERRO SEPARADA**
 
     inscricaoForm.addEventListener("submit", function (e) {
         e.preventDefault(); // Impedir envio padrão do form
 
         const formData = new FormData(inscricaoForm); // Captura dados do form
 
-        // **URL "FORMRESPONSE" CORRETA DO SEU GOOGLE FORMS!  SUBSTITUA A URL PLACEHOLDER ABAIXO PELA SUA URL REAL!**
+        // **URL "FORMRESPONSE" CORRETA DO SEU GOOGLE FORMS!  SUBSTITUA A URL PLACEHOLDER ABAIXO PELA SUA URL REAL!**
         const formResponseUrl = "https://docs.google.com/forms/d/e/1FAIpQLScZOTmLcUiFi4b3_VMokimergZNZrJCkbUXgHZPxAKRahtGew/formResponse"; // URL PLACEHOLDER - **VOCÊ PRECISA SUBSTITUIR!**
 
         fetch(formResponseUrl, { // Enviar dados via POST para o Google Forms
             method: "POST",
-            mode: "no-cors", // Envio cross-origin sem redirecionamento (importante!)
+            mode: "no-cors", // Envio cross-origin SEM REDIRECIONAMENTO (OBRIGATÓRIO para Google Forms!)
             body: formData, // Dados do formulário formatados
         })
         .then(function(response) { // Promessa de resposta do fetch (arrow function para simplificar)
-            if (response.status === 200) { // **VERIFICA SE A RESPOSTA DO SERVIDOR FOI "200 OK" (SUCESSO)**
-                formMessage.style.display = "block"; // Mostra mensagem de sucesso
-                inscricaoForm.reset(); // Limpa o formulário
-                console.log("Formulário enviado com sucesso para o Google Sheets!"); // Mensagem de log no Console (opcional)
-            } else { // Se a resposta do servidor NÃO for 200 OK, algo deu errado no ENVIO
-                console.error("Erro no envio do formulário para o Google Sheets. Status:", response.status); // Log de erro no Console (CRUCIAL para debug!)
-                alert("Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde."); // Alerta amigável para o usuário
-            }
+            // **COM "no-cors", NÃO PODEMOS VERIFICAR response.status!  ASSUMIMOS SUCESSO SE CHEGAR AQUI (SEM ERRO DE REDE)**
+            formMessage.style.display = "block"; // **SEMPRE MOSTRA MENSAGEM DE SUCESSO NESTE CASO**
+            formErrorMessage.style.display = "none"; // **ESCONDE A MENSAGEM DE ERRO (SE ESTIVER VISÍVEL DE TESTES ANTERIORES)**
+            inscricaoForm.reset(); // Limpa o formulário
+            console.log("Formulário enviado com sucesso para o Google Sheets!"); // Mensagem de log no Console (opcional)
         })
-        .catch(function(error) { // Captura erros de REDE ou outros erros no FETCH
+        .catch(function(error) { // Captura erros de REDE ou outros erros no FETCH (FALHA REAL NO ENVIO)
             console.error("Erro de rede ao enviar o formulário:", error); // Log de erro de rede (CRUCIAL para debug!)
-            alert("Ocorreu um erro de rede ao enviar o formulário. Por favor, verifique sua conexão e tente novamente mais tarde."); // Alerta amigável para o usuário
+            formMessage.style.display = "none"; // **ESCONDE A MENSAGEM DE SUCESSO (PARA NÃO CONFUNDIR O USUÁRIO)**
+            formErrorMessage.style.display = "block"; // **MOSTRA A MENSAGEM DE ERRO *SEPARADA* (PROBLEMA REAL DE REDE)**
+            // alert("Ocorreu um erro de rede ao enviar o formulário. Por favor, verifique sua conexão e tente novamente mais tarde."); // Alerta amigável para o usuário - **OPCIONAL - ALERTA JÁ ESTÁ NA MENSAGEM DE ERRO NO HTML**
         });
     });
 
