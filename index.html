@@ -1,119 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Perio - Amanda Gonzalez</title>
 
-    <!-- Font Awesome para ícones -->
+    <link rel="icon" href="images/logo.png" type="imagem/x-">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- Estilos -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<!-- Cabeçalho -->
-<header class="header">
-    <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo -->
-        <img src="images/logo.png" alt="Logo da Dra. Amanda Gonzalez" class="logo">
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1 class="titulo-header">Dra. Perio - Amanda Gonzalez</h1>
 
-        <!-- Título Centralizado -->
-        <h1 class="titulo-header d-flex justify-content-between">Dra. Perio - Amanda Gonzalez</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                aria-controls="offcanvasMenu" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-        <!-- Botão do Offcanvas -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <!-- Offcanvas Menu -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title">Menu</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav>
                 <a href="#sobre-curso">Sobre o Curso</a>
                 <a href="#sobre-professora">Sobre a Professora</a>
                 <a href="#redes-sociais">Redes Sociais</a>
                 <a href="#inscreva-se">Inscreva-se</a>
-            </div>
+            </nav>
         </div>
     </div>
-</header>
 
-    <!-- Formulário Fixo -->
-    <aside class="formulario-fixo" id="inscreva-se">
-        <h2><i class="fas fa-file-signature"></i> Inscreva-se Gratuitamente!</h2>
-        <p>Cadastre-se para acessar a mini aula gratuita sobre técnicas avançadas de Periodontia.</p>
-        <form id="contactForm">
-            <input type="text" id="name" name="name" class="form-control" placeholder="Seu Nome" required>
-            <input type="email" id="email" name="email" class="form-control" placeholder="Seu E-mail" required>
-            <input type="text" id="instagram" name="instagram" class="form-control" placeholder="Seu Instagram (Opcional)">
-            <button type="submit" class="btn btn-primary">Acessar Mini Aula</button>
-        </form>
-    </aside>
+    <div class="page-container">
+        <aside class="formulario-fixo" id="inscreva-se">
+            <form id="inscricaoForm" class="row g-3">
+                <h2><i class="fas fa-file-signature"></i> Inscreva-se Gratuitamente!</h2>
+                <p>Cadastre-se para acessar a mini aula gratuita sobre técnicas avançadas de Periodontia.</p>
 
-    <!-- Conteúdo Principal -->
-    <main class="conteudo">
-
-        <!-- Seção Sobre o Curso -->
-        <section id="sobre-curso">
-            <div class="container d-flex align-items-center">
-                <!-- Texto à esquerda -->
-                <div class="texto">
-                    <h2><i class="fas fa-book-medical"></i>Aprimore Suas Habilidades em Periodontia</h2>
-                    <p>Domine técnicas modernas em periodontia com foco em prática clínica e resultados eficazes. Um curso dinâmico, pensado para quem busca excelência nos tratamentos.</p>
+                <div class="col-12">
+                    <label for="name" class="form-label">Nome Completo</label>
+                    <input type="text" id="name" name="entry.507679500" class="form-control" placeholder="Seu nome completo" required>
                 </div>
-                <!-- Imagem à direita -->
-                <div class="imagem">
-                    <img src="images/curso.jpg" alt="Imagem do Curso" class="img-fluid">
-                </div>
-            </div>
-        </section>
 
-        <!-- Seção Sobre a Professora -->
-        <section id="sobre-professora">
-            <div class="container d-flex align-items-center flex-row-reverse">
-                <!-- Texto à direita -->
-                <div class="texto">
-                    <h2><i class="fas fa-user-md"></i> Conheça a Dra. Amanda Gonzalez</h2>
-                    <p>Cirurgiã-dentista especialista em Periodontia pela USP, professora universitária e referência em tratamentos periodontais. Uma profissional apaixonada por ensinar e transformar sorrisos.</p>
+                <div class="col-12">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" name="entry.1520592149" class="form-control" placeholder="Seu melhor e-mail" required>
                 </div>
-                <!-- Imagem à esquerda -->
-                <div class="imagem">
-                    <img src="images/dra_perio3.jpg" alt="Dra. Amanda Gonzalez" class="img-fluid">
-                </div>
-            </div>
-        </section>
 
-<!-- Seção Redes Sociais -->
-<section id="redes-sociais" class="redes-sociais">
-    <h2><i class="fas fa-share-alt"></i> Conecte-se nas Redes Sociais</h2>
-    <p>Acompanhe mais conteúdos sobre Periodontia.</p>
-    <div class="social-links">
-        <a href="https://www.instagram.com/dra.perio/" target="_blank" class="btn btn-redes">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a href="mailto:contato@draamandagonzalez.com.br" class="btn btn-redes">
-            <i class="fas fa-envelope"></i> E-mail
-        </a>
+                <div class="col-12">
+                    <label for="instagram" class="form-label">Instagram (opcional)</label>
+                    <input type="text" id="instagram" name="entry.1272909252" class="form-control" placeholder="Seu Instagram (se tiver)">
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Acessar Mini Aula</button>
+                </div>
+
+                <div id="formMessage" style="display: none; color: var(--cor-destaque); text-align: center; margin-top: 15px;">
+                    Formulário enviado com sucesso!
+                </div>
+            </form>
+        </aside>
+
+        <main class="main-wrapper">
+            <section id="sobre-curso">
+                <div class="container-fluid d-flex align-items-center flex-wrap">
+                    <div class="texto col-lg-6 col-12 text-center text-lg-start">
+                        <h2><i class="fas fa-book-medical"></i> Aprimore Suas Habilidades em Periodontia</h2>
+                        <p>Domine técnicas modernas em periodontia com foco em prática clínica e resultados eficazes. Um
+                            curso dinâmico, pensado para quem busca excelência nos tratamentos.</p>
+                    </div>
+                    <div class="imagem col-lg-6 col-12 text-center">
+                        <img src="images/curso.jpg" alt="Imagem representativa do curso" class="img-fluid rounded">
+                    </div>
+                </div>
+            </section>
+
+            <section id="sobre-professora">
+                <div class="container-fluid d-flex align-items-center flex-wrap flex-lg-row-reverse">
+                    <div class="texto col-lg-6 col-12 text-center text-lg-start">
+                        <h2><i class="fas fa-user-md"></i> Dra. Amanda Gonzalez</h2>
+                        <p>Cirurgiã-dentista especialista em Periodontia pela USP, professora universitária e referência
+                            em tratamentos periodontais. Uma profissional apaixonada por ensinar e transformar sorrisos.</p>
+                    </div>
+                    <div class="imagem col-lg-6 col-12 text-center">
+                        <img src="images/dra_perio4.JPG" alt="Foto da Dra. Amanda Gonzalez" class="img-fluid rounded">
+                    </div>
+                </div>
+            </section>
+
+            <section id="redes-sociais" class="redes-sociais">
+                <h2><i class="fas fa-share-alt"></i> Conecte-se nas Redes Sociais</h2>
+                <p>Acompanhe mais conteúdos sobre Periodontia.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/dra.perio/" target="_blank" class="btn btn-redes">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="mailto:contato@draamandagonzalez.com.br" class="btn btn-redes">
+                        <i class="fas fa-envelope"></i> E-mail
+                    </a>
+                </div>
+            </section>
+        </main>
     </div>
-</section>
 
-</main>
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Voltar ao Topo" aria-label="Voltar ao Topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <p>&copy; 2024 Dra. Amanda Gonzalez. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>
