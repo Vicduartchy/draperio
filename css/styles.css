@@ -119,111 +119,157 @@ section p {
 
 /* ---------- Estilos do Cabeçalho - MELHORADO COM LOGO ---------- */
 header {
-    /* Fundo com cor sólida mais clara e suave */
-    background-color: var(--cor-cinza-claro); /* Cor sólida cinza claro para o header */
-    background-image: none; /* Remove o gradiente anterior */
-    padding: 20px 0; /* Aumenta padding vertical um pouco para desktop */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 999;
+
+    /* Background com gradiente radial */
+
+    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
+
+    padding: 15px 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    z-index: 999;
+
 }
+
+
+
+
 
 header .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex; /* Mantém flexbox para alinhar logo/título e botão */
-    justify-content: space-between; /* Espaço entre logo/título e botão */
-    align-items: center; /* Alinha verticalmente logo/título e botão */
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
 }
 
-/* Estilos da área do Logo (agrupa Dra Perio e Amanda Gonzalez) */
-header .logo-area {
-    display: flex; /* Flex para alinhar horizontalmente logo e título */
-    align-items: baseline; /* Alinha "Dra Perio" e "Amanda Gonzalez" pela linha de base */
-}
 
-/* Estilos do LOGO "Dra Perio" (H1) */
-header .logo-dra-perio {
-    font-size: 2.5rem; /* Tamanho maior para "Dra Perio" (logo) */
-    font-weight: 700; /* Negrito para "Dra Perio" */
-    color: var(--cor-destaque); /* Cor destaque para "Dra Perio" */
-    margin-right: 10px; /* Espaçamento entre "Dra Perio" e "Amanda Gonzalez" */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave no logo */
-    line-height: 1; /* Ajusta line-height para alinhar verticalmente na logo-area */
-}
 
-/* Estilos do Título "Amanda Gonzalez" (H2) */
+
+
 header .titulo-header {
-    font-size: 1.8rem; /* Tamanho menor para "Amanda Gonzalez" (título secundário) */
-    font-weight: 600; /* Mantém fonte um pouco mais pesada */
-    color: var(--cor-apoio); /* Mantém cor de apoio */
-    text-shadow: none; /* Remove text-shadow de "Amanda Gonzalez" para suavizar */
-    line-height: 1; /* Ajusta line-height para alinhar verticalmente na logo-area */
+
+    font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
+
+    font-weight: 600; /* Fonte um pouco mais pesada */
+
+    color: var(--cor-apoio); /* Cor de destaque */
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
 }
+
+
+
+
 
 header .navbar-toggler {
-    background-color: var(--cor-primaria); /* Muda cor de fundo para primária */
-    color: var(--cor-branco);
-    border: none;
-    border-radius: 10px; /* Mais arredondado */
-    padding: 10px 15px; /* Aumenta um pouco padding */
-    font-size: 1.1rem; /* Diminui um pouco a fonte */
-    cursor: pointer;
-    transition: background-color 0.3s;
+
+    background-color: var(--cor-destaque);
+
+    color: var(--cor-branco);
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 8px 12px;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
 }
+
+
 
 header .navbar-toggler:hover {
-    background-color: var(--cor-apoio);
-}
 
-/* Media Queries para Responsividade do Header */
+    background-color: var(--cor-apoio);
 
-/* Tablet e telas menores que 992px */
-@media (max-width: 992px) {
-    header {
-        padding: 15px 0; /* Reduz padding vertical para tablet */
-        text-align: center; /* Centraliza texto no header em tablet */
-    }
+}header {
 
-    header .container {
-        flex-direction: column; /* Alinha verticalmente em tablet */
-        align-items: center; /* Centraliza itens verticalmente em tablet */
-    }
+    /* Background com gradiente radial */
 
-    header .logo-area {
-        margin-bottom: 10px; /* Espaço abaixo do logo-area em tablet */
-        justify-content: center; /* Centraliza logo e título horizontalmente em tablet */
-    }
+    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
 
-    header .logo-dra-perio {
-        font-size: 2rem; /* Reduz fonte do logo em tablet */
-        margin-right: 0; /* Remove margin-right em tablet (centralizado) */
-    }
+    padding: 15px 0;
 
-    header .titulo-header {
-        font-size: 1.5rem; /* Reduz fonte do título em tablet */
-    }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    z-index: 999;
+
 }
 
 
-/* Mobile e telas menores que 768px */
-@media (max-width: 768px) {
-    header {
-        padding: 10px 0; /* Reduz padding ainda mais para mobile */
-    }
 
-    header .logo-dra-perio {
-        font-size: 1.8rem; /* Reduz ainda mais fonte do logo em mobile */
-    }
 
-    header .titulo-header {
-        font-size: 1.3rem; /* Reduz ainda mais fonte do título em mobile */
-    }
 
-    header .navbar-toggler {
-        font-size: 1.2rem; /* Mantém fonte do botão similar ao tablet */
-    }
+header .container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+}
+
+
+
+
+
+header .titulo-header {
+
+    font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
+
+    font-weight: 600; /* Fonte um pouco mais pesada */
+
+    color: var(--cor-apoio); /* Cor de destaque */
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+}
+
+
+
+
+
+header .navbar-toggler {
+
+    background-color: var(--cor-destaque);
+
+    color: var(--cor-branco);
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 8px 12px;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+
+}
+
+
+
+header .navbar-toggler:hover {
+
+    background-color: var(--cor-apoio);
+
 }
 /* ---------- Estilos Offcanvas Menu ---------- */
 .offcanvas-body {
