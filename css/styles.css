@@ -191,12 +191,12 @@ header .navbar-toggler:hover {
     font-weight: bold; /* Pode adicionar negrito para destacar ainda mais */
 }
 
-/* ---------- Estilos do Formulário Fixo (OTIMIZADO para Harmonia e Proporcionalidade) ---------- */
+/* ---------- Estilos do Formulário Fixo (OTIMIZADO para DIMINUIÇÃO PROPORCIONAL) ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
-    padding: 30px; /* Padding UNIFORME em todas as laterais para equilíbrio */
+    padding: 20px; /* Diminui padding geral para 20px (antes era 30px) - MAIS COMPACTO */
     border-radius: 8px;
-    border-bottom: 2px solid var(--cor-apoio); /* Mantém borda inferior para definir a caixa */
+    border-bottom: 2px solid var(--cor-apoio);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
@@ -205,13 +205,13 @@ header .navbar-toggler:hover {
     right: 20px;
     transform: translateY(-50%);
     z-index: 1000;
-    margin-top: 80px; /* Mantém margem superior para afastar do header */
-    height: auto; /* Mantém altura automática para responsividade */
+    margin-top: 80px;
+    height: auto;
 }
 
 .formulario-fixo h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem; /* Diminui fonte para 1.3rem (antes era 1.5rem) - MENOR */
+    margin-bottom: 15px; /* Diminui margin-bottom para 15px (antes era 20px) - MAIS COMPACTO */
     text-align: center;
     color: var(--cor-primaria);
 }
@@ -219,38 +219,39 @@ header .navbar-toggler:hover {
 .formulario-fixo p {
     text-align: center;
     color: var(--cor-secundaria);
-    margin-bottom: 25px;
-    font-size: 1rem; /* Mantém tamanho de fonte proporcional */
-    line-height: 1.6; /* Mantém line-height para legibilidade */
+    margin-bottom: 20px; /* Diminui margin-bottom para 20px (antes era 25px) - MAIS COMPACTO */
+    font-size: 0.9rem; /* Diminui fonte para 0.9rem (antes era 1rem) - MENOR */
+    line-height: 1.6;
 }
 
 .formulario-fixo .form-control {
-    margin-bottom: 20px; /* Aumenta um pouco o margin-bottom para mais espaçamento vertical */
-    padding: 12px;
+    margin-bottom: 15px; /* Diminui margin-bottom para 15px (antes era 20px) - MAIS COMPACTO */
+    padding: 10px; /* Diminui padding para 10px (antes era 12px) - MENOR */
     border: 2px solid var(--cor-apoio);
     border-radius: 7px;
     width: 100%;
-    font-size: 1rem; /* Mantém tamanho de fonte proporcional */
+    font-size: 0.9rem; /* Diminui fonte para 0.9rem (antes era 1rem) - MENOR */
 }
 
 .formulario-fixo .btn-primary {
     display: block;
     width: 100%;
-    padding: 12px;
+    padding: 10px; /* Diminui padding para 10px (antes era 12px) - MENOR */
     border: none;
     border-radius: 4px;
     background-color: var(--cor-destaque);
     color: var(--cor-branco);
     text-align: center;
     cursor: pointer;
-    font-size: 1.1rem; /* Mantém tamanho de fonte para destacar o botão */
+    font-size: 1rem; /* Diminui fonte para 1rem (antes era 1.1rem) - MENOR */
     transition: background-color 0.3s ease;
-    margin-top: 25px; /* Adiciona margin-top para separar o botão dos campos */
+    margin-top: 20px; /* Diminui margin-top para 20px (antes era 25px) - MAIS COMPACTO */
 }
 
 .formulario-fixo .btn-primary:hover {
     background-color: #0056b3;
 }
+
 /* ---------- Estilos da Seção Redes Sociais ---------- */
 #redes-sociais {
     text-align: center;
