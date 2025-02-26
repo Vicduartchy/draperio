@@ -209,7 +209,7 @@ header .navbar-toggler:hover {
 
 .formulario-fixo h2 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
     color: var(--cor-primaria);
 }
@@ -217,11 +217,11 @@ header .navbar-toggler:hover {
 .formulario-fixo p {
     text-align: center;
     color: var(--cor-secundaria);
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .formulario-fixo .form-control {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 12px;
     border: 2px solid var(--cor-apoio);
     border-radius: 7px;
