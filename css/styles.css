@@ -301,7 +301,7 @@ header .navbar-toggler:hover {
 .footer {
     text-align: center;
     padding: 20px;
-    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
+    background-image: linear-gradient(to right, #262001, #594302, #D97D48, #8C4E37, #D99B96);
     color: var(--cor-secundaria);
     margin-top: 30px;
     border-top: 1px solid var(--cor-cinza-borda);
