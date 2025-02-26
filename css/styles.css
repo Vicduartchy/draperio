@@ -194,11 +194,10 @@ header .navbar-toggler:hover {
 /* ---------- Estilos do Formulário Fixo ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
-    padding: 25px 25px 40px 25px;
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 507px;
     max-width: 400px;
     position: fixed;
     top: 50%;
@@ -209,7 +208,7 @@ header .navbar-toggler:hover {
 
 .formulario-fixo h2 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
     color: var(--cor-primaria);
 }
@@ -217,11 +216,11 @@ header .navbar-toggler:hover {
 .formulario-fixo p {
     text-align: center;
     color: var(--cor-secundaria);
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .formulario-fixo .form-control {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 12px;
     border: 2px solid var(--cor-apoio);
     border-radius: 7px;
@@ -246,7 +245,6 @@ header .navbar-toggler:hover {
 .formulario-fixo .btn-primary:hover {
     background-color: #0056b3;
 }
-
 
 /* ---------- Estilos da Seção Redes Sociais ---------- */
 #redes-sociais {
