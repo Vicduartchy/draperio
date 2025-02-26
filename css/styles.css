@@ -117,159 +117,42 @@ section p {
     margin: 0 auto;
 }
 
-/* ---------- Estilos do Cabeçalho - MELHORADO COM LOGO ---------- */
+/* ---------- Estilos do Cabeçalho (VERSÃO ANTERIOR - GRADIENTE) ---------- */
 header {
-
-    /* Background com gradiente radial */
-
-    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
-
-    padding: 15px 0;
-
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    position: relative;
-
-    z-index: 999;
-
+    /* Background com gradiente radial */
+    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 999;
 }
-
-
-
-
 
 header .container {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 0 20px;
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-
-
-
-
 
 header .titulo-header {
-
-    font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
-
-    font-weight: 600; /* Fonte um pouco mais pesada */
-
-    color: var(--cor-apoio); /* Cor de destaque */
-
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
-
+    font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
+    font-weight: 600; /* Fonte um pouco mais pesada */
+    color: var(--cor-apoio); /* Cor de destaque */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
-
-
-
-
 
 header .navbar-toggler {
-
-    background-color: var(--cor-destaque);
-
-    color: var(--cor-branco);
-
-    border: none;
-
-    border-radius: 5px;
-
-    padding: 8px 12px;
-
-    font-size: 1.2rem;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-
-
 
 header .navbar-toggler:hover {
-
-    background-color: var(--cor-apoio);
-
-}header {
-
-    /* Background com gradiente radial */
-
-    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
-
-    padding: 15px 0;
-
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    position: relative;
-
-    z-index: 999;
-
-}
-
-
-
-
-
-header .container {
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding: 0 20px;
-
-}
-
-
-
-
-
-header .titulo-header {
-
-    font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
-
-    font-weight: 600; /* Fonte um pouco mais pesada */
-
-    color: var(--cor-apoio); /* Cor de destaque */
-
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
-
-}
-
-
-
-
-
-header .navbar-toggler {
-
-    background-color: var(--cor-destaque);
-
-    color: var(--cor-branco);
-
-    border: none;
-
-    border-radius: 5px;
-
-    padding: 8px 12px;
-
-    font-size: 1.2rem;
-
-    cursor: pointer;
-
-    transition: background-color 0.3s;
-
-}
-
-
-
-header .navbar-toggler:hover {
-
-    background-color: var(--cor-apoio);
-
+    background-color: var(--cor-apoio);
 }
 /* ---------- Estilos Offcanvas Menu ---------- */
 .offcanvas-body {
