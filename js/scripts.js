@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(inscricaoForm); // Captura dados do form
 
         // **URL "FORMRESPONSE" CORRETA DO SEU GOOGLE FORMS!  SUBSTITUA A URL PLACEHOLDER ABAIXO PELA SUA URL REAL!**
-        const formResponseUrl = "https://docs.google.com/forms/d/e/1FAIpQLScZOTmLcUiFi4b3_VMokimergZNZrJCkbUXgHZPxAKRahtGew/viewform"; // URL PLACEHOLDER - **VOCÊ PRECISA SUBSTITUIR!**
+        const formResponseUrl = "https://docs.google.com/forms/d/e/1FAIpQLScZOTmLcUiFi4b3_VMokimergZNZrJCkbUXgHZPxAKRahtGew/formResponse"; // URL PLACEHOLDER - **VOCÊ PRECISA SUBSTITUIR!**
 
         fetch(formResponseUrl, { // Enviar dados via POST para o Google Forms
             method: "POST",
