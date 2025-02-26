@@ -1,324 +1,399 @@
-/* ---------- Importação das Fontes Modernas ---------- */
+/* ---------- Importação de Fontes ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* ---------- Paleta de Cores ---------- */
+/* ---------- Variáveis de Cores (Paleta Definida) ---------- */
 :root {
-    --cor-principal: #822845; /* Vinho */
-    --cor-secundaria: #f1e8e8; /* Rosa claro */
-    --cor-branco: #ffffff; /* Branco */
-    --cor-preto: #000000; /* Preto */
-    --cor-destaque: #ffccab; /* Amarelo */
-    --cor-gradiente: linear-gradient(90deg, #822845, #f6a29a); /* Gradiente Vinho para Amarelo */
-    --cor-gradiente-suave: linear-gradient(135deg, #f1e8e8, #ffffff); /* Gradiente Suave */
+    --cor-primaria: #262001;      /* Cor mais escura - Títulos e textos importantes */
+    --cor-secundaria: #594302;     /* Cor secundária - Detalhes e ícones */
+    --cor-destaque: #D97D48;      /* Cor destaque - Botões e elementos ativos */
+    --cor-apoio: #8C4E37;         /* Cor de apoio -   Sombras e detalhes */
+    --cor-suave: #D99B96;        /* Cor suave -    Fundo de seções e detalhes delicados */
+    --cor-branco: #ffffff;         /* Branco */
+    --cor-cinza-claro: #f7f7f7;    /* Cinza claro para fundos muito suaves */
+    --cor-gradiente-suave: linear-gradient(135deg, #D97D48, #D99B96); /* Gradiente suave */
 }
 
-/* ---------- Global ---------- */
-/* ---------- Fundo do Site ---------- */
-body {
-    font-family: 'Poppins', sans-serif !important;
-    background: url('../images/bg2.jpg') no-repeat center center fixed; /* Caminho para a imagem */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
-    color: var(--cor-preto);
+/* ---------- Reset Global e Estilos Base ---------- */
+* {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-
-/* ---------- Cabeçalho ---------- */
-.header {
-    font-family: 'Poppins', sans-serif !important;
-    padding: 10px 20px;
-    background: url('../images/bg2.jpg') no-repeat center center fixed; /* Caminho para a imagem */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-primaria);
+    background: url("../images/header2.jpg") repeat-y center top fixed; /* Imagem de header como fundo */
+    background-size: 100% auto; /* Cobrir a largura e ajustar altura proporcionalmente */
+    overflow-x: hidden; /* Evita scroll horizontal */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
 }
 
-/* ---------- Cabeçalho com Fonte Thin ---------- */
-.header .titulo-header {
-    font-family: 'Poppins', sans-serif; /* Ou troque por Roboto, Lato, etc. */
-    font-weight: 300; /* Peso fino */
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-left: 20px;
-}
-
-.header .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-/* ---------- Título do Cabeçalho ---------- */
-.titulo-header {
-    font-size: 1.8rem;
-    position: left;
+/* ---------- Estilos do Scroll to Top Button ---------- */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--cor-destaque);
     color: var(--cor-branco);
-    font-weight: bold;
-    margin: 0 auto;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-top-btn:hover {
+    background-color: var(--cor-apoio);
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ---------- Estilos Gerais e Containers ---------- */
+.page-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding-left: 20px;
+    padding-right: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-wrapper {
+    width: 100%;
+    margin-right: 0;
+}
+
+section {
+    background-color: var(--cor-branco);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
     text-align: center;
-    flex-grow: 1;
+}
+
+section p {
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.texto {
+    text-align: left;
+}
+
+.imagem img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ---------- Estilos do Cabeçalho ---------- */
+header {
+    /* Background com gradiente radial */
+    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 999;
+}
+
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-.navbar-toggler {
-    background-color: var(--cor-branco);
+
+header .titulo-header {
+    font-size: 2.2rem; /* Tamanho da fonte um pouco maior */
+    font-weight: 600; /* Fonte um pouco mais pesada */
+    color: var(--cor-apoio); /* Cor de destaque */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+
+header .navbar-toggler {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
     border: none;
-    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* ---------- Offcanvas Menu ---------- */
-.offcanvas-header {
-    padding: 10px 20px;
-    background: url('../images/bg2.jpg') no-repeat center center fixed; /* Caminho para a imagem */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+header .navbar-toggler:hover {
+    background-color: var(--cor-apoio);
 }
 
-.offcanvas-body a {
-    display: block;
-    margin: 10px 0;
-    text-decoration: none;
-    color: var(--cor-principal);
-    font-weight: bold;
-}
-
-.offcanvas-body a:hover {
-    text-decoration: underline;
-}
-
-/* ---------- Formulário Fixo ---------- */
-.formulario-fixo {
-    background: var(--cor-gradiente-suave);
-    border-radius: 10px;
+/* ---------- Estilos Offcanvas Menu ---------- */
+.offcanvas-body {
     padding: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+}
+
+.offcanvas-body nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.offcanvas-body nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-cinza-borda);
+    transition: background-color 0.3s ease;
+}
+
+.offcanvas-body nav a:last-child {
+    border-bottom: none;
+}
+
+.offcanvas-body nav a:hover {
+    background-color: var(--cor-fundo-claro);
+}
+
+.offcanvas-body nav a.active {
+    background-color: var(--cor-destaque); /* Cor de fundo destaque para o link ativo */
+    color: var(--cor-branco); /* Cor do texto branco para o link ativo */
+    font-weight: bold; /* Pode adicionar negrito para destacar ainda mais */
+}
+
+/* ---------- Estilos do Formulário Fixo ---------- */
+.formulario-fixo {
+    background-color: var(--cor-branco);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
     position: fixed;
-    top: 80px;
+    top: 50%;
     right: 20px;
-    margin: 20px 0;
-    z-index: 999;
+    transform: translateY(-50%);
+    z-index: 1000;
 }
 
 .formulario-fixo h2 {
     font-size: 1.5rem;
-    color: var(--cor-principal);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+.formulario-fixo p {
+    text-align: center;
+    color: var(--cor-secundaria);
+    margin-bottom: 25px;
 }
 
 .formulario-fixo .form-control {
-    width: 100%;
-    padding: 12px;
     margin-bottom: 15px;
-    border: 2px solid var(--cor-principal);
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.formulario-fixo .form-control:focus {
-    border-color: var(--cor-preto);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border: 2px solid var(--cor-apoio);
+    border-radius: 7px;
+    width: 100%;
+    font-size: 1rem;
 }
 
 .formulario-fixo .btn-primary {
-    background: var(--cor-gradiente);
-    color: var(--cor-branco);
-    border: none;
-    padding: 12px;
+    display: block;
     width: 100%;
-    transition: background-color 0.3s, transform 0.2s;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 .formulario-fixo .btn-primary:hover {
-    background: var(--cor-destaque);
-    transform: scale(1.05);
+    background-color: #0056b3;
 }
 
-/* ---------- Conteúdo Principal ---------- */
-.conteudo {
-    padding: 12px 0;
-    margin-left: 20px; /* Espaço da borda esquerda */
-    margin-right: 340px; /* Espaço até o formulário fixo */
-    box-sizing: border-box;
+
+/* ---------- Estilos da Seção Redes Sociais ---------- */
+#redes-sociais {
+    text-align: center;
 }
 
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background: var(--cor-gradiente-suave);
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+#redes-sociais h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#redes-sociais p {
+    margin-bottom: 30px;
+}
+
+.social-links {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-section h2 {
-    font-size: 2rem;
-    color: var(--cor-principal);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* ---------- Ajustes nas Imagens ---------- */
-section .imagem img {
-    width: 100%;
-    max-width: 250px; /* Diminui o tamanho máximo */
-    height: auto;
-    border-radius: 10px; /* Borda levemente arredondada */
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
-}
-
-/* ---------- Alinhamento de Texto e Imagem ---------- */
-#sobre-curso .container {
-    flex-direction: row; /* Imagem à direita */
-}
-
-#sobre-professora .container {
-    flex-direction: row-reverse; /* Imagem à esquerda */
-}
-
-.texto {
-    flex: 1;
-    padding: 20px;
-}
-
-.imagem {
-    flex: 1;
-    padding: 20px;
-}
-
-/* ---------- Redes Sociais ---------- */
-.redes-sociais {
-    text-align: center;
-}
-
-.redes-sociais .btn-redes {
-    background: linear-gradient(135deg, #E4405F, #C13584); /* Mesma cor para ambos os botões */
-    color: var(--cor-branco);
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+.btn-redes {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    margin: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.redes-sociais .btn-redes:hover {
-    transform: scale(1.1);
-    background: #d32f5b; /* Tom um pouco mais escuro ao passar o mouse */
-}
-
-
-/* ---------- Rodapé ---------- */
-.footer {
-    background: var(--cor-gradiente);
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: var(--cor-branco);
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
+    background-color: var(--cor-destaque);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Responsividade ---------- */
-@media (max-width: 1024px) {
-    .formulario-fixo {
-        position: static;
-        width: 100%;
-        max-width: none;
-        margin: 20px 0;
+.btn-redes:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-redes i {
+    margin-right: 8px;
+}
+
+
+/* ---------- Estilos do Rodapé ---------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
+    color: var(--cor-secundaria);
+    margin-top: 30px;
+    border-top: 1px solid var(--cor-cinza-borda);
+}
+
+
+/* ---------- Media Queries para Responsividade ---------- */
+
+/* Tablet e telas menores que 992px */
+@media (max-width: 992px) {
+    .page-container {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .conteudo {
-        padding: 10px;
+    .main-wrapper {
         margin-right: 0;
     }
 
+    .formulario-fixo {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin-bottom: 20px;
+        box-shadow: none;
+        padding: 15px;
+    }
+
     section {
-        margin: 10px 0;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+    section p {
+        font-size: 1rem;
+    }
+
+    header .titulo-header {
+        font-size: 1.5rem;
     }
 }
 
+
+/* Mobile e telas menores que 768px */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .header .logo {
-        width: 50px;
-        height: 50px;
-    }
-
-    .conteudo {
-        margin: 0;
-        padding: 20px;
-        width: auto;
-        box-sizing: border-box;
-    }
-
-    .formulario-fixo {
-        position: relative;
-        margin: 10px 15px;
-        padding: 20px;
-        top: 0;
-        right: 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: auto;
-        box-sizing: border-box;
-    }
-
-    section {
-        flex-direction: column;
+    header {
         text-align: center;
     }
-    .imagem img {
-        max-width: 80%;
-        margin: 0 auto 15px;
-        border-radius: 10px;
+
+    header .container {
+        flex-direction: column;
     }
 
-    .texto {
-        padding: 10px 0;
-    }
-    section h2 {
-        font-size: 1.8rem;
+    header .titulo-header {
+        font-size: 1.4rem;
         margin-bottom: 10px;
     }
 
+    .navbar-toggler {
+        font-size: 1.3rem;
+    }
+
+    .offcanvas-title {
+        font-size: 1.3rem;
+    }
+
+    .formulario-fixo h2 {
+        font-size: 1.3rem;
+    }
+    .formulario-fixo p {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
     section p {
-        font-size: 1rem;
-        line-height: 1.5;
-        margin-bottom: 15px;
+        font-size: 0.9rem;
     }
-    
-    .header h1 {
-        font-size: 1.2rem;
-        text-align: center;
+
+    #redes-sociais h2 {
+        font-size: 1.5rem;
     }
+    #redes-sociais p {
+        font-size: 0.9rem;
+    }
+
+    .btn-redes {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
