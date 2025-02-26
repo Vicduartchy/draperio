@@ -120,7 +120,7 @@ section p {
 /* ---------- Estilos do Cabeçalho (VERSÃO ANTERIOR - GRADIENTE) ---------- */
 header {
     /* Background com gradiente radial */
-    background-image: radial-gradient(circle, var(--cor-branco), var(--cor-suave));
+    background-image: linear-gradient(to right, #262001, #594302, #D97D48, #8C4E37, #D99B96);
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
