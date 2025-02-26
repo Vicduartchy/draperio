@@ -191,10 +191,10 @@ header .navbar-toggler:hover {
     font-weight: bold; /* Pode adicionar negrito para destacar ainda mais */
 }
 
-/* ---------- Estilos do Formulário Fixo (OTIMIZADO para DIMINUIÇÃO PROPORCIONAL) ---------- */
+/* ---------- Estilos do Formulário Fixo (OTIMIZADO para DIMINUIÇÃO AO MÁXIMO - SUPER COMPACTO) ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
-    padding: 20px; /* Diminui padding geral para 20px (antes era 30px) - MAIS COMPACTO */
+    padding: 15px; /* Diminui padding geral para 15px - SUPER COMPACTO */
     border-radius: 8px;
     border-bottom: 2px solid var(--cor-apoio);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -210,8 +210,8 @@ header .navbar-toggler:hover {
 }
 
 .formulario-fixo h2 {
-    font-size: 1.3rem; /* Diminui fonte para 1.3rem (antes era 1.5rem) - MENOR */
-    margin-bottom: 15px; /* Diminui margin-bottom para 15px (antes era 20px) - MAIS COMPACTO */
+    font-size: 1.2rem; /* Diminui fonte para 1.2rem - MUITO MENOR */
+    margin-bottom: 12px; /* Diminui margin-bottom para 12px - SUPER COMPACTO */
     text-align: center;
     color: var(--cor-primaria);
 }
@@ -219,33 +219,33 @@ header .navbar-toggler:hover {
 .formulario-fixo p {
     text-align: center;
     color: var(--cor-secundaria);
-    margin-bottom: 20px; /* Diminui margin-bottom para 20px (antes era 25px) - MAIS COMPACTO */
-    font-size: 0.9rem; /* Diminui fonte para 0.9rem (antes era 1rem) - MENOR */
+    margin-bottom: 15px; /* Diminui margin-bottom para 15px - SUPER COMPACTO */
+    font-size: 0.9rem; /* Mantém 0.9rem ou experimente 0.85rem se precisar ainda menor */
     line-height: 1.6;
 }
 
 .formulario-fixo .form-control {
-    margin-bottom: 15px; /* Diminui margin-bottom para 15px (antes era 20px) - MAIS COMPACTO */
-    padding: 10px; /* Diminui padding para 10px (antes era 12px) - MENOR */
+    margin-bottom: 10px; /* Diminui margin-bottom para 10px - SUPER COMPACTO */
+    padding: 8px; /* Diminui padding para 8px - MUITO MENOR */
     border: 2px solid var(--cor-apoio);
     border-radius: 7px;
     width: 100%;
-    font-size: 0.9rem; /* Diminui fonte para 0.9rem (antes era 1rem) - MENOR */
+    font-size: 0.85rem; /* Diminui fonte para 0.85rem - MUITO MENOR */
 }
 
 .formulario-fixo .btn-primary {
     display: block;
     width: 100%;
-    padding: 10px; /* Diminui padding para 10px (antes era 12px) - MENOR */
+    padding: 8px; /* Diminui padding para 8px - MUITO MENOR */
     border: none;
     border-radius: 4px;
     background-color: var(--cor-destaque);
     color: var(--cor-branco);
     text-align: center;
     cursor: pointer;
-    font-size: 1rem; /* Diminui fonte para 1rem (antes era 1.1rem) - MENOR */
+    font-size: 0.9rem; /* Diminui fonte para 0.9rem - MUITO MENOR */
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Diminui margin-top para 20px (antes era 25px) - MAIS COMPACTO */
+    margin-top: 15px; /* Diminui margin-top para 15px - SUPER COMPACTO */
 }
 
 .formulario-fixo .btn-primary:hover {
