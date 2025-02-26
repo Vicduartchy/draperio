@@ -196,9 +196,10 @@ header .navbar-toggler:hover {
     background-color: var(--cor-branco);
     padding-top: 25px;
     padding-right: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 60px;
     padding-left: 25px;
     border-radius: 8px;
+    border-bottom: 2px solid var(--cor-apoio); /* Adiciona uma borda inferior para reforçar a "caixa" */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 507px;
