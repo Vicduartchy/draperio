@@ -194,7 +194,10 @@ header .navbar-toggler:hover {
 /* ---------- Estilos do Formulário Fixo ---------- */
 .formulario-fixo {
     background-color: var(--cor-branco);
-    padding: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 60px;
+    padding-left: 25px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 100%;
