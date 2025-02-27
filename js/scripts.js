@@ -76,19 +76,19 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(section);
     });
 
-    // --- 5.  FUNCIONALIDADE DE ENVIO DO FORMULÁRIO PARA O GOOGLE SHEETS (REFEITO E OTIMIZADO) ---
-    // REFEITO E OTIMIZADO para maior clareza e robustez - **MENSAGEM DE SUCESSO CORRIGIDA!**
+    // --- 5.  FUNCIONALIDADE DE ENVIO DO FORMULÁRIO PARA O GOOGLE SHEETS (REDIRECIONAMENTO IMEDIATO) ---
+    // VERSÃO SIMPLIFICADA: REDIRECIONAMENTO IMEDIATO APÓS ENVIO (SEM DELAY)
 
-    const inscricaoForm = document.getElementById("inscricaoForm");
+    const inscricaoForm = document.getElementById("inscricaoForm"); // 👈 Use o ID do seu formulário!
     const formMessage = document.getElementById("formMessage");
-    const formErrorMessage = document.getElementById("formErrorMessage"); // **NOVA MENSAGEM DE ERRO SEPARADA**
+    const formErrorMessage = document.getElementById("formErrorMessage");
 
     inscricaoForm.addEventListener("submit", function (e) {
         e.preventDefault(); // Impedir envio padrão do form
 
         const formData = new FormData(inscricaoForm); // Captura dados do form
 
-        // **URL "FORMRESPONSE" CORRETA DO SEU GOOGLE FORMS!  SUBSTITUA A URL PLACEHOLDER ABAIXO PELA SUA URL REAL!**
+        // **URL "FORMRESPONSE" CORRETA DO SEU GOOGLE FORMS! SUBSTITUA A URL PLACEHOLDER ABAIXO PELA SUA URL REAL!**
         const formResponseUrl = "https://docs.google.com/forms/d/e/1FAIpQLScZOTmLcUiFi4b3_VMokimergZNZrJCkbUXgHZPxAKRahtGew/formResponse"; // URL PLACEHOLDER - **VOCÊ PRECISA SUBSTITUIR!**
 
         fetch(formResponseUrl, { // Enviar dados via POST para o Google Forms
@@ -96,18 +96,23 @@ document.addEventListener('DOMContentLoaded', () => {
             mode: "no-cors", // Envio cross-origin SEM REDIRECIONAMENTO (OBRIGATÓRIO para Google Forms!)
             body: formData, // Dados do formulário formatados
         })
-        .then(function(response) { // Promessa de resposta do fetch (arrow function para simplificar)
-            // **COM "no-cors", NÃO PODEMOS VERIFICAR response.status!  ASSUMIMOS SUCESSO SE CHEGAR AQUI (SEM ERRO DE REDE)**
-            formMessage.style.display = "block"; // **SEMPRE MOSTRA MENSAGEM DE SUCESSO NESTE CASO**
-            formErrorMessage.style.display = "none"; // **ESCONDE A MENSAGEM DE ERRO (SE ESTIVER VISÍVEL DE TESTES ANTERIORES)**
+        .then(function(response) { // Promessa de resposta do fetch
+            // **COM "no-cors", NÃO PODEMOS VERIFICAR response.status! ASSUMIMOS SUCESSO SE CHEGAR AQUI (SEM ERRO DE REDE)**
+            formMessage.style.display = "block"; // SEMPRE MOSTRA MENSAGEM DE SUCESSO NESTE CASO
+            formErrorMessage.style.display = "none";
             inscricaoForm.reset(); // Limpa o formulário
-            console.log("Formulário enviado com sucesso para o Google Sheets!"); // Mensagem de log no Console (opcional)
+            console.log("Formulário enviado com sucesso para o Google Sheets!");
+
+            // 🚀🚀🚀  REDIRECIONAMENTO IMEDIATO PARA A PÁGINA DE CONFIRMAÇÃO E MINI AULA 🚀🚀🚀
+            window.location.href = '/pagina2.html'; // 👈👈👈  URL DE REDIRECIONAMENTO AGORA É '/pagina2.html' !
+            // 🚀🚀🚀  FIM DO REDIRECIONAMENTO IMEDIATO 🚀🚀🚀
+
+
         })
-        .catch(function(error) { // Captura erros de REDE ou outros erros no FETCH (FALHA REAL NO ENVIO)
-            console.error("Erro de rede ao enviar o formulário:", error); // Log de erro de rede (CRUCIAL para debug!)
-            formMessage.style.display = "none"; // **ESCONDE A MENSAGEM DE SUCESSO (PARA NÃO CONFUNDIR O USUÁRIO)**
-            formErrorMessage.style.display = "block"; // **MOSTRA A MENSAGEM DE ERRO *SEPARADA* (PROBLEMA REAL DE REDE)**
-            // alert("Ocorreu um erro de rede ao enviar o formulário. Por favor, verifique sua conexão e tente novamente mais tarde."); // Alerta amigável para o usuário - **OPCIONAL - ALERTA JÁ ESTÁ NA MENSAGEM DE ERRO NO HTML**
+        .catch(function(error) { // Captura erros de REDE ou outros erros no FETCH
+            console.error("Erro de rede ao enviar o formulário:", error);
+            formMessage.style.display = "none";
+            formErrorMessage.style.display = "block";
         });
     });
 
