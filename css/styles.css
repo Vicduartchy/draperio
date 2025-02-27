@@ -403,3 +403,67 @@ header .navbar-toggler:hover {
         padding: 8px 15px;
     }
 }
+/* ---------- Ajustes de Margens para Boxes (Evitar "Colado" nas Bordas e Header) - **APENAS PAGINA2.HTML** ---------- */
+
+.pagina-confirmacao-mini-aula .container, /* Adicionado .pagina-confirmacao-mini-aula */
+.pagina-confirmacao-mini-aula .page-container, /* Adicionado .pagina-confirmacao-mini-aula */
+.pagina-confirmacao-mini-aula .formulario-fixo, /* Adicionado .pagina-confirmacao-mini-aula */
+.pagina-confirmacao-mini-aula .main-wrapper, /* Adicionado .pagina-confirmacao-mini-aula */
+.pagina-confirmacao-mini-aula main { /* Adicionado .pagina-confirmacao-mini-aula */
+    margin-top: 30px;  /* Margem superior - APLICADA APENAS NA PAGINA2.HTML */
+}
+
+/* ---------- Estilos específicos para a página pagina2.html (Confirmação e Mini Aula) ---------- */
+
+/* Estilos para a seção do vídeo na pagina2.html */
+.pagina-confirmacao-mini-aula .video-mini-aula {
+    text-align: center; /* Centraliza o título "Assista Agora..." */
+    margin-bottom: 50px; /* Espaçamento abaixo do título do vídeo */
+}
+
+/* Estilos para o CONTAINER do vídeo (centralizar e responsividade) */
+.pagina-confirmacao-mini-aula .video-container {
+    max-width: 800px; /* Largura máxima do container do vídeo (ajuste se precisar) */
+    margin: 0 auto; /* Centraliza HORIZONTALMENTE o container do vídeo */
+    /* Para manter a proporção do vídeo responsiva */
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 (9 / 16 * 100) - padrão widescreen */
+    height: 0;
+    overflow: hidden;
+}
+
+/* Estilos para o IFRAME do vídeo (preencher o container responsivamente) */
+.pagina-confirmacao-mini-aula .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- Ajustes de Margens em Mobile para Boxes (Evitar "Colado" nas Bordas e Header) ---------- */
+
+@media (max-width: 768px) { /* Media query para telas menores que 768px (mobile) */
+
+    .pagina-confirmacao-mini-aula .container, /* Adicionado .pagina-confirmacao-mini-aula */
+    .pagina-confirmacao-mini-aula .page-container, /* Adicionado .pagina-confirmacao-mini-aula */
+    .pagina-confirmacao-mini-aula .formulario-fixo, /* Adicionado .pagina-confirmacao-mini-aula */
+    .pagina-confirmacao-mini-aula .main-wrapper, /* Adicionado .pagina-confirmacao-mini-aula */
+    .pagina-confirmacao-mini-aula main { /* Adicionado .pagina-confirmacao-mini-aula */
+        padding-left: 15px; /* 🚀🚀🚀 MARGEM ESQUERDA REDUZIDA para 15px (era 20px) 🚀🚀🚀 */
+        padding-right: 15px; /* 🚀🚀🚀 MARGEM DIREITA REDUZIDA para 15px (era 20px) 🚀🚀🚀 */
+        margin-top: 20px;  /* 🚀🚀🚀 MARGEM SUPERIOR REDUZIDA para 20px (era 30px) 🚀🚀🚀 */
+    }
+
+    /* Ajuste adicional para o header em mobile, se necessário */
+    .pagina-confirmacao-mini-aula header .container { /* Adicionado .pagina-confirmacao-mini-aula */
+        padding-left: 15px; /* 🚀🚀🚀 MARGEM ESQUERDA REDUZIDA para 15px (era 20px) 🚀🚀🚀 */
+        padding-right: 15px; /* 🚀🚀🚀 MARGEM DIREITA REDUZIDA para 15px (era 20px) 🚀🚀🚀 */
+    }
+
+    /* Ajuste adicional para o footer em mobile, se necessário */
+    .pagina-confirmacao-mini-aula footer.footer { /* Adicionado .pagina-confirmacao-mini-aula */
+        padding-left: 15px; /* 🚀🚀🚀 MARGEM ESQUERDA REDUZIDA para 15px (era 20px) 🚀🚀🚀 */
+        padding-right: 15px; /* 🚀🚀🚀 MARGEM DIREITA REDUZIDA para 15px (era 20px) 🚀🚀🚀 */
+    }
+}
