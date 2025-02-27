@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Formulário enviado com sucesso para o Google Sheets!");
 
             // 🚀🚀🚀  REDIRECIONAMENTO IMEDIATO PARA A PÁGINA DE CONFIRMAÇÃO E MINI AULA 🚀🚀🚀
-            window.location.href = '../pagina2.html'; // 👈👈👈  URL DE REDIRECIONAMENTO AGORA É '/pagina2.html' !
+            window.location.href = '/pages/pagina2.html'; // 👈👈👈  URL DE REDIRECIONAMENTO AGORA É '/pagina2.html' !
             // 🚀🚀🚀  FIM DO REDIRECIONAMENTO IMEDIATO 🚀🚀🚀
 
 
